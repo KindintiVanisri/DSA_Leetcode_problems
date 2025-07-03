@@ -25,3 +25,27 @@ This approach works in linear time O(n) and constant space O(1).
 Input: [7, 1, 5, 3, 6, 4] 
 Output: 5  
 Explanation: Buy at price 1 and sell at price 6.
+
+
+# Remove Duplicates from Sorted Array
+
+This problem asks us to remove duplicate elements from a sorted integer array **in-place**, such that each element appears only once. The function should return the new length of the array after removing duplicates, and the array should be modified to show the result in the first k elements.
+
+## Problem Explanation
+Given a **sorted** array nums, we want to remove duplicates in-place such that each element appears only once and return the new length. The relative order of the elements should be preserved, and extra space is not allowed (O(1) space constraint).
+### Example:
+**Input:**  
+nums = [0,0,1,1,1,2,2,3,3,4]  
+**Output:**  
+5  
+**Modified array:**  
+[0,1,2,3,4,...] 
+## Approach
+- We use **two pointers**:  
+  - j: points to the position of the last unique element  
+  - i: iterates through the array from start to end
+- At each step, if nums[i] is different from nums[j], it means we found a new unique element, so we:
+  - increment j
+  - assign nums[j] = nums[i]
+- Finally, we return j + 1, which represents the number of unique elements.
+
