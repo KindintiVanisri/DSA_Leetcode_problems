@@ -49,3 +49,16 @@ nums = [0,0,1,1,1,2,2,3,3,4]
   - assign nums[j] = nums[i]
 - Finally, we return j + 1, which represents the number of unique elements.
 
+
+
+**Sort Colors Problem**
+The "Sort Colors" problem from LeetCode asks us to sort an array consisting of only 0s, 1s, and 2s in-place and in a single pass. The optimal solution uses the Dutch National Flag algorithm, which efficiently partitions the array using three pointers: low, mid, and high.
+We start with low and mid at the beginning and high at the end of the array. As we iterate:
+If the element at mid is 0, we swap it with low and move both forward.
+If it's 1, we move mid forward.
+If it's 2, we swap it with high and move high backward.
+This ensures all 0s are placed first, followed by 1s, then 2s, in O(n) time and O(1) space.
+**Example:**
+Input: [2, 0, 2, 1, 1, 0]
+Output: [0, 0, 1, 1, 2, 2]
+
